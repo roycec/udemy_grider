@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // Create a new type of 'deck'
-// wich is a slice of strings
+// which is a slice of strings
 type deck []string
 
 func newDeck() deck {
