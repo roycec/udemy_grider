@@ -22,12 +22,14 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	jim.updateName("Jimmy")
+	jimPointer := &jim
+	jimPointer.updateName("Jimmy")
 	jim.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+// func (p person) updateName(newFirstName string) { // copy by value
+func (pointerToPerson *person) updateName(newFirstName string) { // copy by ref
+	pointerToPerson.firstName = newFirstName // short for (*pointerToPerson).firstName = ...
 }
 
 func (p person) print() {
