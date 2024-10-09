@@ -13,6 +13,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(resp)
+	fmt.Println(resp.Status)
 
 }
